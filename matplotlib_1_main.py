@@ -40,6 +40,13 @@ mp.yticks([-1.0,-0.5,0.5,1.0])
 mp.plot(x,sinx, linestyle = '--', linewidth=2, color='orangered', alpha=0.8,label=r'$y=sin(x)$')
 mp.plot(x,cosx, linestyle ='-.', linewidth=2, color='dodgerblue', alpha = 0.9,label=r'$y=\frac{1}{2}cos(x)$')
 
+# 绘制特殊点
+pointx = [np.pi/2,np.pi/2]
+pointy =[1,0]
+mp.scatter(pointx,pointy,
+           marker='o',s=70,color='red',
+           label = 'sample points',zorder=3) # 图层优先度zorder
+
 # 图例
 mp.legend()
 mp.show()
